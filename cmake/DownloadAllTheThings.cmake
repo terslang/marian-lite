@@ -12,15 +12,6 @@ FetchContent_Declare(intgemm
 )
 FetchContent_MakeAvailable(intgemm)
 
-FetchContent_Declare(pathie
-        GIT_REPOSITORY https://github.com/kroketio/pathie-cpp.git
-        GIT_TAG "0.1.3"
-        GIT_SHALLOW    TRUE
-        GIT_PROGRESS   TRUE
-        )
-FetchContent_MakeAvailable(pathie)
-FetchContent_GetProperties(pathie)
-
 FetchContent_Declare(cli11
         GIT_REPOSITORY https://github.com/kroketio/cli11.git
         GIT_TAG "2.3.0"
@@ -47,3 +38,4 @@ FetchContent_Declare(SQLiteCpp
         )
 FetchContent_MakeAvailable(SQLiteCpp)
 FetchContent_GetProperties(SQLiteCpp)
+

@@ -1,4 +1,5 @@
 #include "marian-lite/common/file_stream.h"
+#include <sys/stat.h>
 #include "marian-lite/common/utils.h"
 
 #include <streambuf>
@@ -97,7 +98,7 @@ OutputFileStream::OutputFileStream(const std::string &file)
   ABORT_IF(!ret, "File cannot be opened", file);
   ABORT_IF(ret != streamBuf1_.get(), "Return value is not equal to streambuf pointer, that is weird");
 
-  if(file_.extension() == marian::filesystem::Path(".gz")) {
+  if(file_.extension() == marian::filesystem::Path(std::string(".gz"))) {
 #if defined(WASM_COMPATIBLE_SOURCE)
     ABORT(".gz file decompression not supported in WASM builds of Marian: {}", file);
 #else

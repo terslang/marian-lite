@@ -14,6 +14,7 @@ Fork of [browsermt/marian-dev](https://github.com/browsermt/marian-dev) made for
 - Removed code related to the training/creation of models
 - Removed examples, unit tests
 - Removed support for Apple, Microsoft, WASM
+- Removed Pathie and replaced with std::filesystem
 - 100% FOSS
 
 ### Requirements
@@ -21,7 +22,6 @@ Fork of [browsermt/marian-dev](https://github.com/browsermt/marian-dev) made for
 Dependencies that marian-lite links against:
 
 - https://github.com/kroketio/intgemm/
-- https://github.com/kroketio/pathie-cpp/
 - https://github.com/kroketio/sentencepiece-browsermt/
 
 And others:
