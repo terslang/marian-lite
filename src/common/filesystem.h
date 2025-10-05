@@ -41,9 +41,10 @@ namespace filesystem {
       std::filesystem::path path;
 
     public:
-      Path() {}
+      Path() = default;
       Path(const Path& p) : path{p.path} {}
       Path& operator=(const Path& p) = default;
+      Path(const char* s) : path{s} {}
       Path(const std::string& s) : path{s} {}
       Path(const std::filesystem::path& p) : path{p} {}
 
