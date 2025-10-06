@@ -94,7 +94,6 @@ foreach(_BUILD_TYPE STATIC SHARED)
 
     if(VENDORED_LIBS)
         target_link_libraries(${_TARGET} PRIVATE
-                pathie
                 sentencepiece-browsermt
                 sentencepiece_train-browsermt
                 )
@@ -107,13 +106,11 @@ foreach(_BUILD_TYPE STATIC SHARED)
         target_link_libraries(${_TARGET} PRIVATE
                 sentencepiece-browsermt::sentencepiece-browsermt
                 sentencepiece-browsermt::sentencepiece_train-browsermt
-                pathie::pathie
                 )
     endif()
 
     target_include_directories(${_TARGET} PUBLIC
             $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
-            $<BUILD_INTERFACE:${pathie_SOURCE_DIR}/include>
             $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include/marian-lite/3rd_party>
             $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
             )

@@ -74,7 +74,6 @@ endif()
 include(CompilerStuff)
 
 if(NOT VENDORED_LIBS)
-    # https://github.com/kroketio/pathie-cpp/
     # https://github.com/kroketio/sentencepiece-browsermt/
     # https://github.com/kroketio/cli11/
     # https://github.com/SRombauts/SQLiteCpp
@@ -85,7 +84,6 @@ if(NOT VENDORED_LIBS)
         # https://github.com/kroketio/intgemm/
         find_package(intgemm REQUIRED)
     endif()
-    find_package(pathie REQUIRED)
     find_package(sentencepiece-browsermt REQUIRED)
     find_package(CLI11 REQUIRED)
     find_package(SQLiteCpp REQUIRED)

@@ -1,4 +1,5 @@
 #include "marian-lite/common/file_stream.h"
+#include <sys/stat.h>
 #include "marian-lite/common/utils.h"
 
 #include <streambuf>
